@@ -1,6 +1,6 @@
 ### Your first feature
 
-To start developing your feature, you need to add a new feature class. So add a class in the folder of your feature (for the folder structure, see here [[folderStructure]]). After that, add the following methods to the class and make it a subclass of `MoonlightFeature`. Also dont forget to modify the constructor
+To start developing your feature, you need to add a new feature class. So add a class in the folder of your feature (for the folder structure, see here [folder structure](/moonlight/dev/folderStructure)). After that, add the following methods to the class and make it a subclass of `MoonlightFeature`. Also dont forget to modify the constructor
 
 ```csharp
 public class DummyFeature : MoonlightFeature  

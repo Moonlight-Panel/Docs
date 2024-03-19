@@ -3,4 +3,4 @@
 ### Overview
 
 - [Moonlight CLI](/cli)
-- [Development](/dev)
+- [Development](/moonlight/dev)
