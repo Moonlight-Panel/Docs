@@ -13,7 +13,7 @@ Images define a server type to use for a server. A image contains out of the fol
 - A selection of docker images the server can use
 - A installation script for servers data and software
 
-If you want to learn more about the configuration of images and/or want to create your own images, have a look at the [details](/moonlight/images)
+If you want to learn more about the configuration of images and/or want to create your own images, have a look at the [details](/moonlight/images/details)
 
 #### Where to find images and where to import them
 
