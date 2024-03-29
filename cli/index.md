@@ -40,3 +40,4 @@ mlcli daemon <subcommand> <parameters>
 | config | Opens the config.json config file in the nano text editor. Requires nano to be installed |
 | logs | Shows the logs of the daemon |
 | restart | Restarts the daemon |
+| status | Shows the status of the daemon |
