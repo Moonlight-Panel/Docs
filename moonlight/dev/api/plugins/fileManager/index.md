@@ -1,0 +1,1 @@
+For a list of available interfaces look [here](/moonlight/dev/api/plugins)
