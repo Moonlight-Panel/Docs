@@ -12,22 +12,22 @@ Example:
 ```
 public class PluginsDiagnoseAction : IDiagnoseAction
 {
-public async Task GenerateReport(ZipArchive archive, IServiceProvider serviceProvider)
-{
-var pluginService = serviceProvider.GetRequiredService<PluginService>();
-
-var content = "Loaded plugins:\n\n";
-
-foreach (var plugin in await pluginService.GetLoadedPlugins())
-{
-content += $"Name: {plugin.Name}\n";
-content += $"Author: {plugin.Author}\n";
-content += $"Issue Tracker: {plugin.IssueTracker}\n";
-content += $"Assembly name: {plugin.GetType().FullName}\n";
-content += "\n";
-}
-
-await archive.AddText("plugins.txt", content);
-}
+    public async Task GenerateReport(ZipArchive archive, IServiceProvider serviceProvider)
+    {
+        var pluginService = serviceProvider.GetRequiredService<PluginService>();
+        
+        var content = "Loaded plugins:\n\n";
+        
+        foreach (var plugin in await pluginService.GetLoadedPlugins())
+        {
+            content += $"Name: {plugin.Name}\n";
+            content += $"Author: {plugin.Author}\n";
+            content += $"Issue Tracker: {plugin.IssueTracker}\n";
+            content += $"Assembly name: {plugin.GetType().FullName}\n";
+            content += "\n";
+        }
+        
+        await archive.AddText("plugins.txt", content);
+    }
 }
 ```

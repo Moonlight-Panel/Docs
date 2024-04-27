@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 ### Moonlight CLI
 
 The moonlight cli is a useful tool for installing, updating, and administrating moonlight instances.
@@ -27,10 +15,10 @@ It has the following commands:
 mlcli install <subcommand> <parameters>
 ```
 
-| Subcommand | Description                                                                                                                                                       |
-|------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| run | Runs the current installed version of the installer (located in the /tmp directory). If no local version exists, it fetches the latest one from our servers.      |
-| update | Replaces the current installed version of the installer with the latest one from our servers.                                                                     |
+| Subcommand | Description|
+|------------|------------|
+| run | Runs the current installed version of the installer (located in the /tmp directory). If no local version exists, it fetches the latest one from our servers. |
+| update | Replaces the current installed version of the installer with the latest one from our servers. |
 
 
 #### Module: Moonlight

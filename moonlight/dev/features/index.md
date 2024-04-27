@@ -5,27 +5,27 @@ To start developing your feature, you need to add a new feature class. So add a 
 ```csharp
 public class DummyFeature : MoonlightFeature
 {
-public DummyFeature()
-{
-Name = "Dummy";
-Author = "MasuOwO";
-IssueTracker = "your issue tracker url";
-}
-
-public override async Task OnPreInitialized(PreInitContext context)
-{
-
-}
-
-public override async Task OnInitialized(InitContext context)
-{
-
-}
-
-public override async Task OnUiInitialized(UiInitContext context)
-{
-
-}
+    public DummyFeature()
+    {
+        Name = "Dummy";
+        Author = "MasuOwO";
+        IssueTracker = "your issue tracker url";
+    }
+    
+    public override async Task OnPreInitialized(PreInitContext context)
+    {
+    
+    }
+    
+    public override async Task OnInitialized(InitContext context)
+    {
+    
+    }
+    
+    public override async Task OnUiInitialized(UiInitContext context)
+    {
+    
+    }
 }
 ```
 
