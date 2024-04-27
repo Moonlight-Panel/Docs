@@ -2,6 +2,7 @@
 
 ### Overview
 
+- [Getting Started](/gettingStarted)
 - [Moonlight CLI](/cli)
 - [Development](/moonlight/dev)
 - [Image Development](/moonlight/images)

@@ -1,12 +1,12 @@
 ### Getting started
-***This project is in early access***
+***This project still in development, changes may occur***
 
 Start hosting servers with moonlight in a few simple steps.
 
 Requirements:
-- A ubuntu linux server
-- The ability to run docker
-- 4GB of memory (recommended, can work with less)
+- An Ubuntu Linux server
+- The ability to run Docker
+- 4 GB of memory (recommended; can work with less)
 - 20GB of disk space
 - 2 Cores
 
@@ -22,7 +22,7 @@ and select the "Moonlight Panel" and then "Install". It will guide you through t
 
 **Step 2: Login into the panel**
 
-Open the panel with the url shown by the installer, execute the following command and login with the credentials shown:
+Open the panel with the URL shown by the installer, execute the following command, and login with the credentials shown:
 ```
 mlcli moonlight login
 ```

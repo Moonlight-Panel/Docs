@@ -1,8 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
 ### Moonlight CLI
 
-The moonlight cli is a usefull tool for installing, updating and administrating moonlight instances.
-It loads the scripts from our script server in order to ensure you are up to date.
-The cli has multiple modules. For managing moonlight you have the `moonlight` module. You can call a module by executing
+The moonlight cli is a useful tool for installing, updating, and administrating moonlight instances.
+It loads the scripts from our script server in order to ensure you are up-to-date.
+The CLI has multiple modules. For managing moonlight, you have the `moonlight` module. You can call a module by executing
 ```
 mlcli <module name> <subcommand> <parameters>
 ```
@@ -15,10 +27,10 @@ It has the following commands:
 mlcli install <subcommand> <parameters>
 ```
 
-| Subcommand | Description |
-|------------|-------------|
-| run | Runs the current installed version of the installer (located in the /tmp directory). If no local version exists, it fetches the latest one from our servers |
-| update | Replaces the current installed version of the installer with the latest one from our servers |
+| Subcommand | Description                                                                                                                                                       |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| run | Runs the current installed version of the installer (located in the /tmp directory). If no local version exists, it fetches the latest one from our servers.      |
+| update | Replaces the current installed version of the installer with the latest one from our servers.                                                                     |
 
 
 #### Module: Moonlight
