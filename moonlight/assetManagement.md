@@ -1,5 +1,0 @@
-### Asset Management
-
-In Moonlight, every feature can register assets (which are CSS and JS files) that are required for displaying stuff or for interop purposes. All assets are stored in the "Assets" directory under their corresponding feature name. If you want to override an asset file, for example, by changing an image, you can use the "overrideAssets" folder. This works in the same way that minecraft resource packs work. Just place the file to overwrite with in the same location as the original file in the "overrideAssets" folder. So if the original file is in "Assets/Core/css/blazor.css" the override path would be "overrideAssets/Core/css/blazor.css".
-
-If you want to register a asset as a feature developer, you can do this in the pre-init phase by calling the "AddAsset" function of the context. You need to provide a name and a path. The name is the name of your feature and the path is the path to the file relative from the "Assets/YourFeatureName" folder.
