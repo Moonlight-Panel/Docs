@@ -2,26 +2,39 @@
 
 In Moonlight, a feature can add assets to to moonlight, like JavaScript files, Images and Stylesheets. This documentation article will cover how developers can add assets to their features and how panel administrator can override assets.
 
-## Overiding assets
+## How to Override Assets in Moonlight
 
-To understand how to override assets, we need to understand how assets are stored by moonlight. If you open the browser devtools, and look for the source file for the favicon, you will see the path `/api/core/asset/Core/svg/logo.svg`.
+**Introduction:**
+In Moonlight, you can customize various assets like logos and styles to tailor your system to your preferences. This guide will walk you through the process of overriding assets, allowing you to replace default assets with your own custom ones.
 
-We can see that moonlight is providing its assets via an api, to be exact, the `core` api (path is `/api/core/`). Assets are served over the `/asset/` route on the api.
+**Understanding Asset Storage:**
+Moonlight stores its assets using a structured approach. When you inspect the source file for an asset, such as the favicon, you'll notice a path like `/api/core/asset/Core/svg/logo.svg`. This path reveals how assets are accessed through Moonlight's API.
 
-The next part of the path is `/Core/`, which represents the name of the assets feature. This name varies for different features.
+**API Structure:**
+Assets are served via Moonlight's API, specifically the `core` API, with the path `/api/core/`. Assets are accessed through the `/asset/` route on the API.
 
-`/svg/logo.svg` represents the actual path of the wanted ressource. **This text is relevant for overriding ressources with Moonlight.**
+**Identifying Asset Features:**
+The next part of the asset path, such as `/Core/`, indicates the name of the feature to which the asset belongs. This name may vary depending on the specific feature.
 
-To override an asset, open Moonlight in your preferred browser and navigate to _System => Files_. You will now see a filemanager, open the `assetOverride` folder.
+**Locating the Desired Asset:**
+The remaining part of the path, such as `/svg/logo.svg`, specifies the exact location of the desired asset within its feature.
 
-Lets now say you want to override the asset `/images/image.png`. As the file is in the `/images` folder, you create a folder named `images` (the same name is important, otherwise it wont work). Now, you can upload your desired file (in this case a `.png` file) you want to replace the original asset with. It **must** have the same name as the original asset, otherwise it won't work.
+**Overriding Process:**
+To override an asset, open Moonlight in your web browser and navigate to _System => Files_. Here, you'll find the file manager. Open the `assetOverride` folder.
 
-### Here are some more examples how asset overriding works
+**Replacing Assets:**
+Suppose you want to replace the asset `/api/core/asset/Core/images/image.png`. Start by creating a folder with the name of the asset's feature, such as `/Core`. Within this folder, create a folder named `images` to match the original asset's directory structure. Now, upload your desired replacement file (e.g., a `.png` file) into this folder. It's crucial that the replacement file has the same name as the original asset for the override to work properly.
 
-| Api Path                                   | Asset Override path |
-| ------------------------------------------ | ------------------- |
-| `/api/core/asset/Servers/styles/style.css` | `/styles/style.css` |
-| `/api/core/asset/Core/img/logo.png`        | `/img/logo.png`     |
+**Examples:**
+The table below illustrates examples of how asset paths map to their override paths.
+
+| Api Path                                   | Asset Override path        |
+| ------------------------------------------ | -------------------------- |
+| `/api/core/asset/Servers/styles/style.css` | `Servers/styles/style.css` |
+| `/api/core/asset/Core/img/logo.png`        | `Core/img/logo.png`        |
+
+**Conclusion:**
+By following this guide, you can easily override default assets in Moonlight, enabling you to personalize your system's appearance to better suit your needs and preferences.
 
 ## For feature developers
 
