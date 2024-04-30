@@ -38,6 +38,8 @@ By following this guide, you can easily override default assets in Moonlight, en
 
 ## For feature developers
 
+If you want to learn how to develop a feature, consider visiting [this](/moonlight/dev/features/)
+
 **This step by step guide will show you how you can add custom assets to your feature.**
 Lets say you wanted to create an image for your feature
 
