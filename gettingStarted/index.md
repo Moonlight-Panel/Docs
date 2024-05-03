@@ -31,29 +31,9 @@ mlcli moonlight login
 
 Go to Servers => Nodes and add a new node. After adding a node, go to the setup page and follow the instructions.
 
-*NOTE: If you are installing the panel and the node on the same server and you are using https with the panel, add the `--skip-lets-encrypt` option to the generated command shown by moonlight*
+E: If you are installing the panel and the node on the same server and you are using https with the panel, add the `--skip-lets-encrypt` option to the generated command shown by moonlight*
 
 After the installation is finished, you should see information about the node in the information page of the node. If it shows data, the node has been successfully installed.
-
-> Please note that your have an File in ``/etc/moonlight/config.json`` you must Delete the File to Run the Deamon Command.
-
-**Deamon Error Error**:
-
-If you Deamon can't install and you get this error:
-```
-E: Unable to locate package dotnet-sdk-7.0
-E: Couldn't find any package by glob 'dotnet-sdk-7.0'
-```
-Then you need to install the Dotnet SDK 7.0 
-> ### Link to microsoft: 
-> - https://learn.microsoft.com/de-de/dotnet/core/install/linux-ubuntu-install?pivots=os-linux-ubuntu-2204&tabs=dotnet7
-> - https://learn.microsoft.com/de-de/dotnet/core/install/linux-ubuntu-install?pivots=os-linux-ubuntu-2204&tabs=dotnet7#ubuntu-2204
-
-#### Command - Copy Paste:<br>
-*(Work on Ubuntu 22.4)*
-```
-sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0
-```
 
 
 **Step 4: Add allocations**
@@ -69,3 +49,28 @@ Then go to Servers => Images and press "Import Egg". After importing, you should
 **Step 6: Create your first server**
 
 Go to Servers and create a new server. Select your user and the imported image and submit it. Then go to the user server list and the server should appear in your list. Click on it to manage it.
+
+
+**Troubleshooting**
+
+> #### **I can't set up the daemon with the command**
+
+Please note that you have a file in `/etc/moonlight/config.json` that you must delete to run the daemon command.
+
+Then delete the file with and run the setup command again.
+```bash 
+rm /etc/moonlight/config.json
+``` 
+
+> #### **The daemon requires "dotnet sdk 7.0" to run**
+
+If your daemon can't be installed and you get this error:<br>
+``E: Unable to locate package dotnet-sdk-7.0``<br>
+``E: Couldn't find any package by glob 'dotnet-sdk-7.0'``<br>
+Then you need to install the Dotnet SDK 7.0 
+
+#### Command - Copy Paste:
+*(Works on Ubuntu 22.4)*
+```bash
+sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0
+```
