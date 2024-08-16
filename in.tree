@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="in"
+                 name="Moonlight Docs"
+                 start-page="Getting-started.md">
+
+    <toc-element topic="Guides.md">
+        <toc-element topic="Getting-started.md"/>
+    </toc-element>
+    <toc-element topic="CLI-Reference.md"/>
+    <toc-element topic="Panel.md">
+        <toc-element topic="Development.md">
+            <toc-element topic="Api-Reference.md">
+                <toc-element topic="FileManager.md">
+                    <toc-element topic="Actions.md"/>
+                </toc-element>
+                <toc-element topic="Core.md">
+                    <toc-element topic="Diagnose.md"/>
+                </toc-element>
+            </toc-element>
+            <toc-element topic="Folder-structure.md"/>
+        </toc-element>
+        <toc-element topic="Features.md"/>
+        <toc-element topic="Assets.md"/>
+        <toc-element topic="Images.md">
+            <toc-element topic="Configuration-Details.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="Troubleshooting.md">
+        <toc-element topic="Acquiring-admin-perms-via-the-db.topic"/>
+        <toc-element topic="Invalid-node-configuration.topic"/>
+        <toc-element topic="Default-Login-Issues.topic"/>
+    </toc-element>
+</instance-profile>

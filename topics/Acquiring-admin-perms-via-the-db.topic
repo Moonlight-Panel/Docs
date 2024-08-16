@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Acquiring admin perms via the db" id="Acquiring-admin-perms-via-the-db">
+
+    <p>
+        If you locked yourself out or just want to give another account admin permissions without using the permission editor in moonlight,
+        you can use the steps in the following guide:
+    </p>
+
+    <chapter title="Before you start" id="before-you-start">
+        <p>
+            Before you start, make sure you have a shell session as root and moonlight installed successfully
+        </p>
+    </chapter>
+
+    <chapter title="Using the db to set admin permissions" id="part-one">
+        <p>
+            Describe what the user will learn and accomplish in the first part,
+            then write a step-by-step procedure but on a real-world example.
+        </p>
+
+        <procedure>
+            <step>
+                <p>First, you need to find out your database root password, you can do this by executing:</p>
+
+                <code-block lang="bash">
+                    docker inspect moonlight_db | grep ROOT_PASSWORD
+                </code-block>
+
+                <p>
+                    The result should be smth like this:
+                </p>
+
+                <code-block lang="bash">
+                    "MYSQL_ROOT_PASSWORD=yOuRFaNcYRoOtPaSwOrD"
+                </code-block>
+            </step>
+
+            <step>
+                <p>After that you want to log in to your database by executing:</p>
+
+                <code-block lang="bash">
+                    docker exec -it moonlight_db mysql -u root -p
+                </code-block>
+
+                It will ask you for your password, enter the password you got from the step above
+            </step>
+
+            <step>
+                <p>Then change the database to the database moonlight is using with:</p>
+
+                <code-block lang="sql">
+                    USE moonlight;
+                </code-block>
+            </step>
+
+            <step>
+                <p>And for the final step, execute the following command replacing the username "testyowo" with the username of the account:</p>
+
+                <code-block lang="sql">
+                    UPDATE Users SET Permissions = 9999 WHERE Username = "testyowo";
+                </code-block>
+            </step>
+
+            <step>
+                <p>Then exit with:</p>
+
+                <code-block lang="sql">
+                    exit;
+                </code-block>
+
+                <p>
+                    Refresh the page and you should have full permissions
+                </p>
+            </step>
+        </procedure>
+    </chapter>
+</topic>

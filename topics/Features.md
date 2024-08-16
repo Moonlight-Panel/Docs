@@ -1,8 +1,8 @@
-### Your first feature
+# Features
 
-To start developing your feature, you need to add a new feature class. So add a class in the folder of your feature (for the folder structure, see here [folder structure](/moonlight/dev/folderStructure)). After that, add the following methods to the class and make it a subclass of `MoonlightFeature`. Also, don't forget to modify the constructor.
+To start developing your feature, you need to add a new feature class. So add a class in the folder of your feature (for the folder structure, see here [folder structure](Folder-structure.md). After that, add the following methods to the class and make it a subclass of `MoonlightFeature`. Also, don't forget to modify the constructor.
 
-```csharp
+```C#
 public class DummyFeature : MoonlightFeature
 {
     public DummyFeature()
@@ -33,7 +33,7 @@ public class DummyFeature : MoonlightFeature
 Features have three different stages of initialization
 
 ##### 1. Pre-Init
-In this stage, services should be added to the service collection and the Kestrel web server config if needed. The context object passed into the `OnPreInitialized` function, which you need to override in order to process it, you have two objects. One is the `WebApplicationBuilder` which can be used to configure services, and the asp.net Kestrel web server. The other is a list of assemblies which will be scanned for services (for more information, see [[dependencyInjection]] ). You should not modify this list at all as it may break other features and/or moonlight's core
+In this stage, services should be added to the service collection and the Kestrel web server config if needed. The context object passed into the `OnPreInitialized` function, which you need to override in order to process it, you have two objects. One is the `WebApplicationBuilder` which can be used to configure services, and the asp.net Kestrel web server. The other is a list of assemblies which will be scanned for services. You should not modify this list at all as it may break other features and/or moonlight's core
 
 ##### 2. Init
 This stage is invoked after the web application has been built and the service collection has been constructed. The context object of this handler which is passed into the `OnInitialized` method contains the `WebApplication` object. With this object, you are able to load services from the dependency injection, configure the mapping, and more Kestrel options
@@ -43,7 +43,7 @@ The third and last main feature stage is the UI init stage. In this stage, you c
 
 To enable the page routing, just add the following method call in the `OnUiInitialized` method.
 
-```csharp
+```C#
 context.EnablePages<YourFeatureClass>();
 ```
 
@@ -51,7 +51,7 @@ YourFeatureClass is the name of the class defining the feature.
 
 To add a sidebar item, just add the following call to the `OnUiInitialized` method:
 
-```csharp
+```C#
 context.AddSidebarItem("Dashboard", "bxs-dashboard", "/admin", needsExactMatch: true, isAdmin: true, index: 10324);
 ```
 

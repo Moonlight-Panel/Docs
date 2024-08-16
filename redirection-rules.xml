@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="2d4f211">
+        <description>Created after removal of "Empty MD Topic" from Moonlight Docs</description>
+        <accepts>Empty-MD-Topic.html</accepts>
+    </rule>
+    <rule id="28766f37">
+        <description>Created after removal of "Invalid node cofiguration" from Moonlight Docs</description>
+        <accepts>Invalid-node-cofiguration.html</accepts>
+    </rule>
+    <rule id="33905478">
+        <description>
+            <![CDATA[Created after removal of "<Invalid-node-configuration.md>" from Moonlight Docs]]></description>
+        <accepts>Invalid-node-configuration.html</accepts>
+    </rule>
+    <rule id="499375c4">
+        <description>Created after removal of "Acquiring admin perms via the db" from Moonlight Docs</description>
+        <accepts>Acquiring-admin-perms-via-the-db.html</accepts>
+    </rule>
+    <rule id="4e89c35">
+        <description>Created after removal of "Starter" from Moonlight Docs</description>
+        <accepts>starter.html</accepts>
+    </rule>
+</rules>

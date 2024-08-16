@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Default Login Issues" id="Default-Login-Issues">
+
+    <p>
+        Is <code>mlcli moonlight login</code> not showing you the default login credentials? Here you learn how to fix this issue with a few simple steps
+    </p>
+
+    <chapter title="Before you start" id="before-you-start">
+        <p>
+            Before you start, make sure you have a shell session as root and moonlight installed successfully
+        </p>
+    </chapter>
+
+    <chapter title="Default User Creation failed" id="part-one">
+        <p>
+            Sometimes the database moonlight is using is not starting fast enough leading to the failure of the "Default User Creation" task. With the following steps you find out if this issue happened on your instance and how to fix it
+        </p>
+
+        <procedure>
+            <step>
+                <p>Execute the following command in the terminal:</p>
+
+                <code-block lang="bash">
+                    mlcli moonlight logs
+                </code-block>
+            </step>
+
+            <step>
+                Check if it contains a line talking about the "Default User Creation" task failing. If you find such logs, moonlight tried to create the default user while the database was not started yet.
+            </step>
+
+            <step>
+                <p>Execute the following command in the terminal:</p>
+
+                <code-block lang="bash">
+                    docker restart moonlight
+                </code-block>
+            </step>
+
+            <step>
+                <p>Wait a few seconds and run the following command in the terminal:</p>
+
+                <code-block lang="bash">
+                    mlcli moonlight logs
+                </code-block>
+
+                <p>It should contain a line with the email address <code>adminowo@example</code> and the generated password. Use these credentials to login into your moonlight instance</p>
+            </step>
+        </procedure>
+    </chapter>
+</topic>

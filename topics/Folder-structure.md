@@ -1,4 +1,4 @@
-#### Moonlights folder structure
+# Folder structure
 
 ```
 Moonlight

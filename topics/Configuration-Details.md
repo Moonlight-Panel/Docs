@@ -1,18 +1,19 @@
-### Details about images and their configuration
+# Configuration Details
 
-#### Donate URL
+###### Donate URL
+
 The donate url is a way to link a website of your choice in an image to allow the community to thank you for your work. If a donate url is set, it will display a donate button in the image overview, linking to the website.
 
-#### Update URL
+###### Update URL
 The update URL provides an easy way to keep images up-to-date. When updating an image, this url will be fetched, and the result will be interpreted as the new image configuration in a JSON format. An example usage would be to set the update url to the `raw.githubusercontent.com` raw link of the image json in your github repo. With this, the users of your image will be able to fetch the latest version without the need to lookup your github repo.
 
-#### Startup Command
+###### Startup Command
 The startup command defines the command that will be executed at the start of a server lifecycle. Variables in this command need to be handled by the Docker image of the moonlight image. Moonlight does **not** parse the startup command in any way (yet).
 
-#### Stop Command
+###### Stop Command
 The stop command can be either a text you want to send to the server's standard input or a SIG command. To specify a text, just type it. If you want to specify a SIG command, put a `^` before the name of the SIG command. For example, to send a SIGKILL when a user requests the stop of a server, write `^SIGKILL` into the stop command. `^C` will emit a `SIGINT` signal.
 
-#### Parse configurations
+###### Parse configurations
 The parse configuration defines how moonlight will parse defined configuration files.
 
 To start, add a new configuration and specify a relative file path. Then specify a type, which will define what parser to use.
@@ -24,7 +25,7 @@ Current implemented types:
 After that, add a new key-value definition by pressing the plus button.
 Specify the key and the value. To use variables, write the variable in double brackets. So for a variable called `MINECRAFT_VERSION` you would write `{{MINECRAFT_VERSION}}`.
 
-#### Variables
+###### Variables
 
 Variables allow users and admins to define the server's behavior, e.g., specify the Minecraft version you want to use on a Minecraft image.
 Variables will be passed as environment variables to the server container. There are also default and unmodifiable variables you can use.
@@ -45,12 +46,12 @@ Variable options:
 - **Filter**: The behavior of this field depends on the type. See below
 
 Filter behavior:
-- Text: The user's input will be checked against the filter value, which is interpreted as a regex expression
-- Toggle: If the filter is set to `boolean` the value of the toggle will be written as `true` or `false`. If not, it will be saved as `1` or `0`
-- Select; The filter value represents the available options for the select separated by a `;`
-- Number: *None*
+- **Text**: The user's input will be checked against the filter value, which is interpreted as a regex expression
+- **Toggle**: If the filter is set to `boolean` the value of the toggle will be written as `true` or `false`. If not, it will be saved as `1` or `0`
+- **Select**: The filter value represents the available options for the select separated by a `;`
+- **Number**: *None*
 
-#### Docker images:
+###### Docker images:
 This defines the available Docker images to use for the server container. You are also able to select the default Docker image that will be used if a new server is going to be created. It's also possible to allow the user to change the image himself.
 
 A Docker image definition has multiple options:
@@ -59,7 +60,7 @@ A Docker image definition has multiple options:
 - **Auto Pull**: Specifies if the Docker image should be pulled/updated when creating a server instance. Disable this for only local existing Docker images
 
 
-#### Installation
+###### Installation
 
 The installation section defines what to do when a server is going to be created. Install the required software and download files using this section.
 

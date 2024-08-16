@@ -1,8 +1,8 @@
-# Asset Management
+# Assets
 
 In Moonlight, a feature can add assets to to moonlight, like JavaScript files, Images and Stylesheets. This documentation article will cover how developers can add assets to their features and how panel administrator can override assets.
 
-## How to Override Assets in Moonlight
+## How to override assets in Moonlight
 
 **Introduction:**
 In Moonlight, you can customize various assets like logos and styles to tailor your system to your preferences. This guide will walk you through the process of overriding assets, allowing you to replace default assets with your own custom ones.
@@ -29,7 +29,7 @@ Suppose you want to replace the asset `/api/core/asset/Core/images/image.png`. S
 The table below illustrates examples of how asset paths map to their override paths.
 
 | Api Path                                   | Asset Override path        |
-| ------------------------------------------ | -------------------------- |
+|--------------------------------------------|----------------------------|
 | `/api/core/asset/Servers/styles/style.css` | `Servers/styles/style.css` |
 | `/api/core/asset/Core/img/logo.png`        | `Core/img/logo.png`        |
 
@@ -37,8 +37,6 @@ The table below illustrates examples of how asset paths map to their override pa
 By following this guide, you can easily override default assets in Moonlight, enabling you to personalize your system's appearance to better suit your needs and preferences.
 
 ## For feature developers
-
-If you want to learn how to develop a feature, consider visiting [this](/moonlight/dev/features/)
 
 **This step by step guide will show you how you can add custom assets to your feature.**
 Lets say you wanted to create an image for your feature
@@ -58,6 +56,6 @@ _(We are now in `/Assets/Test/images/test`)_
 **Here are some more examples:**
 
 | Feature Name | Path in `/Assets` folder             | AddAsset function                                    | Api url for your asset                        |
-| ------------ | ------------------------------------ | ---------------------------------------------------- | --------------------------------------------- |
+|--------------|--------------------------------------|------------------------------------------------------|-----------------------------------------------|
 | `Support`    | `/Assets/Support/styles/styles.css`  | `context.AddAsset("Support", "styles/styles.css");`  | `/api/core/assets/Support/styles/styles.css`  |
 | `Billing`    | `/Assets/Billing/images/success.png` | `context.AddAsset("Billing", "images/success.png");` | `/api/core/assets/Billing/images/success.png` |
