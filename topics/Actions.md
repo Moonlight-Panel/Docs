@@ -1,5 +1,7 @@
 # Actions
 
+<secondary-label ref="outdated" />
+
 Adding custom context menu actions for the file manager
 
 ###### Properties

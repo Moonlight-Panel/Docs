@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE labels SYSTEM "https://resources.jetbrains.com/writerside/1.0/labels-list.dtd">
+<labels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/labels.xsd">
+    <secondary-label id="outdated" name="Outdated" color="red">Outdated. Will be removed soon</secondary-label>
+    <secondary-label id="wip" name="Work in progress" color="purple">Work in progress</secondary-label>
+    <secondary-label id="beta" name="Beta" color="tangerine">Beta</secondary-label>
+    <secondary-label id="experimental" name="Experimental" color="blue">This is an experimental feature</secondary-label>
+</labels>

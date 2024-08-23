@@ -27,4 +27,8 @@
         <description>Created after removal of "Starter" from Moonlight Docs</description>
         <accepts>starter.html</accepts>
     </rule>
+    <rule id="1e3f5ce4">
+        <description>Created after removal of "Section Starting Page" from Moonlight Docs</description>
+        <accepts>Section-Starting-Page.html</accepts>
+    </rule>
 </rules>

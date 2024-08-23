@@ -1,4 +1,6 @@
-# Development
+# Dev (Outdated)
+
+<secondary-label ref="outdated" />
 
 Moonlight is built in a modular and expandable way. To extend moonlight's functionalities, you have two options. MoonlightFeatures und MoonlightPlugins.
 

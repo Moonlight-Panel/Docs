@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Development" id="developmentIntroduction">
+    <section-starting-page>
+        <title>Development</title>
+        <description>
+            Customize and extend moonlight by developing your own plugins
+        </description>
+
+        <primary>
+            <title>Start with these guides</title>
+            <a href="gettingStartedDevelopment.topic"/>
+            <a href="Devtools.topic"/>
+        </primary>
+    </section-starting-page>
+
+</topic>

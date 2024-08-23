@@ -1,5 +1,7 @@
 # Assets
 
+<secondary-label ref="outdated" />
+
 In Moonlight, a feature can add assets to to moonlight, like JavaScript files, Images and Stylesheets. This documentation article will cover how developers can add assets to their features and how panel administrator can override assets.
 
 ## How to override assets in Moonlight

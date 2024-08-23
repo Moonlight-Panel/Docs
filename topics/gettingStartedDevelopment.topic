@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Getting started" id="gettingStartedDevelopment" help-id="gettingStartedPlugins">
+
+    <secondary-label ref="wip"/>
+
+    <p>
+        Before you can start developing plugins or contributing to moonlight, you need to set up a development environment
+    </p>
+
+    <p>
+        In this tutorial, you will learn how to:
+    </p>
+
+    <list>
+        <li>Setup a development environment</li>
+        <li>Compile and start moonlight</li>
+        <li>Compile and start a moonlight plugin</li>
+    </list>
+
+    <chapter title="Requirements" id="requirements">
+        <tabs>
+            <tab id="linux-requirements" title="Linux">
+                <list>
+                    <li>C# IDE (and not a text editor like vs code if you want a good development experience). Recommended: <a href="https://www.jetbrains.com/rider/">Jetbrains Rider</a></li>
+                    <li><a href="Devtools.topic">Moonlight DevTools CLI</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/dotnet/core/install/linux">.NET SDK 8</a></li>
+                    <li><a href="https://docs.docker.com/engine/install/">Docker Engine</a></li>
+                </list>
+            </tab>
+            <tab id="windows-requirements" title="Windows">
+                <!--
+                <list>
+                    <li>C# IDE (and not a text editor like vs code if you want a good development experience). Recommended: <a href="https://www.jetbrains.com/rider/">Jetbrains Rider</a></li>
+                    <li><a href="Devtools.topic">Moonlight DevTools CLI</a></li>
+                    <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET SDK 8</a></li>
+                    <li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a></li>
+                </list>
+                -->
+                A linux vm and all mentioned items in the "Linux" tab :>
+            </tab>
+        </tabs>
+    </chapter>
+
+    <chapter title="Creating an environment for a plugin" id="dev-instance-plugin">
+        <p>
+            To start developing a plugin for moonlight, you need a development environment first. To create a development environment, follow these steps:
+        </p>
+
+        <procedure>
+            <step>
+                <p>Open a terminal and create a directory for the development environment. Replace the path with the one you want to use</p>
+
+                <code-block lang="bash">
+                    mkdir ~/MoonlightDev/myNewPlugin
+                    cd ~/MoonlightDev/myNewPlugin
+                    mldev plugin create MyNewPlugin .
+                    mldev db start
+                </code-block>
+            </step>
+
+            <step>
+                Open the folder of your instance in the file manager and go into the folder called <code>source</code>.
+                In there should be a file called <code>MyNewPlugin.sln</code> (Depends on the provided name). Open this file with the C# IDE of your choice.
+                It should automatically load the project, and you should be able to start developing a plugin. It should already contain some example code.
+            </step>
+
+            <step>
+                To test your plugin, go back to the terminal and run the following command.
+                If this is the first run, moonlight should automatically create an admin user for you and print the credentials in the console.
+                After moonlight started, you should see a URL in the console. Open it in your web browser to open your local moonlight test instance.
+                <code-block lang="bash">
+                    mldev plugin run
+                </code-block>
+            </step>
+        </procedure>
+    </chapter>
+
+    <chapter title="Creating an environment for contributions" id="dev-instance-contribution">
+        <p>
+            To start modifying moonlights source code, you need a development environment first. To create a development environment, follow these steps:
+        </p>
+
+        <procedure>
+            <step>
+                <p>Open a terminal and create a directory for the development environment. Replace the path with the one you want to use</p>
+
+                <code-block lang="bash">
+                    mkdir ~/MoonlightDev/myMoonlightContribution
+                    cd ~/MoonlightDev/myMoonlightContribution
+                    mldev contribution create ImproveUi .
+                    mldev db start
+                </code-block>
+            </step>
+
+            <step>
+                Open the folder of your instance in the file manager and go into the folder called <code>source</code>.
+                In there should be a file called <code>Moonlight.sln</code>. Open this file with the C# IDE of your choice.
+                It should automatically load the project, and you should be able to start developing with moonlight.
+            </step>
+
+            <step>
+                To test your changes, just run the project via your IDE.
+                If you use Rider for example, you just need to press the green "Play" button. The database credentials should be automatically via the <code>mldev db start</code> command.
+            </step>
+        </procedure>
+    </chapter>
+</topic>

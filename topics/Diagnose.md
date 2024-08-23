@@ -1,5 +1,7 @@
 # Diagnose
 
+<secondary-label ref="outdated" />
+
 Adding custom entries to the diagnose file
 
 **Methods**

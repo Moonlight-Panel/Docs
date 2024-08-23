@@ -3,7 +3,13 @@
 <buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-    <variables></variables>
+    <variables>
+        <download-page>https://docs.moonlightpanel.xyz/getting-started.html</download-page>
+        <download-title>Install moonlight</download-title>
+        <showDownloadButton>true</showDownloadButton>
+        <primary-color>blueberry</primary-color>
+        <custom-favicons>logo.svg</custom-favicons>
+    </variables>
     <build-profile instance="in">
         <variables>
             <noindex-content>false</noindex-content>

@@ -1,5 +1,7 @@
 # Features
 
+<secondary-label ref="outdated" />
+
 To start developing your feature, you need to add a new feature class. So add a class in the folder of your feature (for the folder structure, see here [folder structure](Folder-structure.md). After that, add the following methods to the class and make it a subclass of `MoonlightFeature`. Also, don't forget to modify the constructor.
 
 ```C#

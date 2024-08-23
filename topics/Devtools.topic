@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Devtools" id="Devtools">
+
+    <secondary-label ref="wip"/>
+    <secondary-label ref="experimental"/>
+
+    <p>
+        The moonlight dev tools is a script collection bundled into a CLI able to help you to set up projects faster.
+        It allows you to create development environments with a few commands, start and set up a test database locally using docker.
+        Additionally, the CLI is able to improve the contribution to the moonlight project itself by offering commands to pull your own fork of moonlight
+        and develop features faster.
+    </p>
+
+    <chapter title="Contribution commands" id="contributionCommands">
+        <table>
+            <tr>
+                <td>Command</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        <![CDATA[
+        mldev contribution setup <link to own fork on github>
+    ]]>
+                    </code-block>
+                </td>
+                <td>
+                    This saves the link to your own fork on GitHub in the config files in <code>~/.config/mldev/contribution-url</code> and will be used if you create a new contribution
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        <![CDATA[
+        mldev contribution create <name> <path> (branch)
+    ]]>
+                    </code-block>
+                </td>
+                <td>
+                    This creates a new dev environment to modify the moonlight source code.
+                    The name you need to specify should <b>not</b> contain spaces, as it will be used as a branch name.
+                    Make sure the name makes sense if you want to create a pull request later.
+                    The path specified is the folder where the cli will create the development environment in.
+                    The optional branch parameter is the branch where the cli will create a sub-branch from
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        <![CDATA[
+        mldev contribution commit <description>
+    ]]>
+                    </code-block>
+                </td>
+                <td>
+                    The command allows you to commit your changes to push them later to your own fork.
+                    You need to execute this in the directory where the <code>mldev.meta</code> file is located in your development environment.
+                    The description specifies the commit name
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        <![CDATA[
+        mldev contribution push
+    ]]>
+                    </code-block>
+                </td>
+                <td>
+                    This command allows you to push your changes to your own fork on GitHub.
+                    You need to execute this in the directory where the <code>mldev.meta</code> file is located in your development environment
+                </td>
+            </tr>
+        </table>
+    </chapter>
+
+    <chapter title="Database commands" id="databaseCommands">
+        <table>
+            <tr>
+                <td>Command</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        mldev db start
+                    </code-block>
+                </td>
+                <td>
+                    This command starts a database container for the current project.
+                    You need to execute this in the directory where the <code>mldev.meta</code> file is located in your development environment.
+                    If the container is missing it will create one
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        mldev db stop
+                    </code-block>
+                </td>
+                <td>
+                    This command stops the database container for the current project.
+                    You need to execute this in the directory where the <code>mldev.meta</code> file is located in your development environment.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        mldev db restart
+                    </code-block>
+                </td>
+                <td>
+                    This command stops the database container for the current project.
+                    You need to execute this in the directory where the <code>mldev.meta</code> file is located in your development environment.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        mldev db delete
+                    </code-block>
+                </td>
+                <td>
+                    This command deletes the database container and the database volume for the current project.
+                    You need to execute this in the directory where the <code>mldev.meta</code> file is located in your development environment.
+                </td>
+            </tr>
+        </table>
+    </chapter>
+
+    <chapter title="Plugin commands" id="pluginCommands">
+        <table>
+            <tr>
+                <td>Command</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        <![CDATA[
+        mldev plugin create <name> <path> (branch)
+    ]]>
+                    </code-block>
+                </td>
+                <td>
+                    This creates a new dev environment to develop a moonlight plugin.
+                    The name you need to specify should <b>not</b> contain spaces, as it will be used as a branch name.
+                    The path specified is the folder where the cli will create the development environment in.
+                    The optional branch parameter is the moonlight branch where the cli will download moonlight to compile and run the plugin from
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        <![CDATA[
+        mldev plugin run
+    ]]>
+                    </code-block>
+                </td>
+                <td>
+                    The command allows you to compile your plugin and start it in moonlight.
+                    You need to execute this in the directory where the <code>mldev.meta</code> file is located in your development environment.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code-block lang="bash">
+                        <![CDATA[
+        mldev plugin publish
+    ]]>
+                    </code-block>
+                </td>
+                <td>
+                    This command allows you to create a build of your plugin which can be used without development environment.
+                    You need to execute this in the directory where the <code>mldev.meta</code> file is located in your development environment.
+                    The publish output will be located in the <code>publish</code> folder of your project
+
+                    <warning>
+                        This command cannot include any nuget packages you used to develop your plugin. You need to ship these DLL files manually
+                    </warning>
+                </td>
+            </tr>
+        </table>
+    </chapter>
+</topic>

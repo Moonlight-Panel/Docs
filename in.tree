@@ -11,6 +11,10 @@
     </toc-element>
     <toc-element topic="CLI-Reference.md"/>
     <toc-element topic="Panel.md">
+        <toc-element topic="developmentIntroduction.topic">
+            <toc-element topic="gettingStartedDevelopment.topic"/>
+            <toc-element topic="Devtools.topic"/>
+        </toc-element>
         <toc-element topic="Development.md">
             <toc-element topic="Api-Reference.md">
                 <toc-element topic="FileManager.md">

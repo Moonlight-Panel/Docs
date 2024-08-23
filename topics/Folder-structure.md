@@ -1,5 +1,7 @@
 # Folder structure
 
+<secondary-label ref="outdated" />
+
 ```
 Moonlight
 ├───Core // The place for all of moonlights core stuff
