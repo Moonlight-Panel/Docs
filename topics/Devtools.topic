@@ -15,6 +15,29 @@
         and develop features faster.
     </p>
 
+    <chapter title="Installation" id="installation">
+        <tabs>
+            <tab id="linux-command" title="Linux">
+                <code-block lang="bash">
+                    sudo su
+                    curl https://raw.githubusercontent.com/Moonlight-Panel/Devtools/main/mldev.sh > /usr/local/bin/mldev
+                    chmod +x /usr/local/bin/mldev
+                </code-block>
+            </tab>
+            <tab id="windows-requirements" title="Windows">
+                <!--
+                <list>
+                    <li>C# IDE (and not a text editor like vs code if you want a good development experience). Recommended: <a href="https://www.jetbrains.com/rider/">Jetbrains Rider</a></li>
+                    <li><a href="Devtools.topic">Moonlight DevTools CLI</a></li>
+                    <li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">.NET SDK 8</a></li>
+                    <li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a></li>
+                </list>
+                -->
+                A linux vm and the command mentioned in the "Linux" tab :>
+            </tab>
+        </tabs>
+    </chapter>
+
     <chapter title="Contribution commands" id="contributionCommands">
         <table>
             <tr>
